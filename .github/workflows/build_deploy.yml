@@ -1,1 +1,11 @@
 name: Build and Deploy Appplication
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  Test-Workflow:
+    runs-on: ubuntu-latest  
+    steps:
+      - run: echo "Welcome to workflow"
+      - run: echo "Event that Triggered this  Workflow was $({github.event_name})"
